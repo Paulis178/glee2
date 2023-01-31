@@ -1,6 +1,7 @@
 // =====================================================================================================================
 .header {
   width: 100%;
+  padding: 50px 0 45px 0;
   &.sticky {
     // ..стили для липкого хедера
   }
@@ -10,7 +11,101 @@
     display: flex;
     align-items: center;
   }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
+
+.logo {
+  display: flex;
+  align-items: center;
+  &__img {
+    margin-right: 10px;
+  }
+  &__text {
+    color: #436372;
+    font-size: 36px;
+    line-height: 58px;
+  }
+}
+.menu {
+  &__list {
+    display: flex;
+  }
+  &__list-item + .menu__list-item {
+    padding-left: 30px;
+  }
+  &__list-link {
+    color: #436372;
+    padding-bottom: 1px;
+    transition: all .3s;
+    @extend %quicksand-400;
+    &:hover {
+      border-bottom: 1px solid #436372;;
+      @extend %quicksand-500;
+    }
+  }
+  &__list-link--active {
+    color: #436372;
+    border-bottom: 1px solid #436372;
+    @extend %quicksand-500;
+  }
+}
+.user-nav {
+  display: flex;
+  &__link {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__link--search {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #edf1f4;
+    margin-right: 20px;
+  }
+  &__link-img {
+    
+  }
+  &__link--heart {
+    height: 50px;
+    width: 90px;
+    border-radius: 25px 0 0 25px;
+    background-color: #fcd7b6;
+    border-right: 1px solid #fde7d3;
+  }
+  &__num {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+    top: 9px;
+    right: 27px;
+    font-size: 10px;
+    color: #243f4d;
+    text-align: center;
+    line-height: 16px;
+  }
+  &__link--cart {
+    height: 50px;
+    width: 89px;
+    border-radius: 0 25px 25px 0;
+    background-color: #fcd7b6;
+  }
+  &__link--more {
+    margin-left: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #a3bbc8;
+  }
+}
+
 // =====================================================================================================================
 
 // Burger
